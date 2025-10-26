@@ -1,6 +1,7 @@
 package com.example;
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class DateTimeFunctions {
 
@@ -52,12 +53,12 @@ public class DateTimeFunctions {
 	/*
 	 * Implement the method so that it returns the time difference between two input dates
 	 * in terms of years, months, and days.
-	 * Return the String in the format: "Year-20:Months-5:Days-1"
+	 * Return the String in the format: "Years-20:Months-5:Days-1"
 	 */
 	public static String getTimeDifference(LocalDate date1, LocalDate date2) {
 		//YOUR CODE STARTS HERE
-		Period diff = date1.until(date2);
-		return diff.toString();
+		Period diff = date1.until(date2);;
+		return "Years-"+diff.getYears()+":Months-"+diff.getMonths()+":Days-"+diff.getDays();
 		//YOUR CODE ENDS HERE
 
 	}
